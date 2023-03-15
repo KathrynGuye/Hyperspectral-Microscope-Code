@@ -14,8 +14,10 @@ Here you can import the h5 file into a workable array, extract relevant experime
 
     file = some_.h5_file  
 **Data Import**  
-.. code-block:: python
-import_h5(file,mode = 'r')  #imports h5 file; default read-only  
+
+.. code-block:: python  
+
+	import_h5(file,mode = 'r')  #imports h5 file; default read-only  
 
 `get_library(file)` | prints the h5 tree
 
