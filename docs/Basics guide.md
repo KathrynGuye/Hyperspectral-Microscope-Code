@@ -1,5 +1,5 @@
 **Basic functions for working with the h5 files output by the IMA Hyperspectral Microscope**  
-Here you can import the h5 file into a workable array, extract relevant experimental information from the h5 file, replicate simple images and plots, and extract spectral features. 
+Here you can import the h5 file into a workable array, extract relevant experimental information from the h5 file, and replicate simple images and plots. 
 
 ***
 
@@ -9,6 +9,7 @@ Here you can import the h5 file into a workable array, extract relevant experime
 	import matplotlib.pyplot as plt  
 	import h5py  
 	import pyUSID as usid  
+	from math import prod  
 
 ***
 **User Input**  
@@ -50,3 +51,6 @@ Here you can import the h5 file into a workable array, extract relevant experime
 `crop_data_cube(data_cube, min_width=None, max_width=None, min_height=None, max_height=None, min_wavelength = None, max_wavelength = None)` | spatial and wavelength crop of data_cube  
 ***
 **Replicate PhySpec Plots**  
+`plot_pixel(data_cube,position,fig_num=None,xlabel='None',ylabel=None,**kwargs)` | plots spectrum at pixel (x,y); kwargs relevant to matplotlib.pyplot  
+
+`average_spectrum(data_cube,fig_num = None,xlabel = None,ylabel = None,**kwargs)` | plots spectrum of whole image; kwargs relevant to matplotlib.pyplot; input crop_data_cube for select region  
