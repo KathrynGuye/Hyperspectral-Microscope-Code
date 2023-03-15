@@ -3,7 +3,7 @@ Here you can import the h5 file into a workable array, extract relevant experime
 
 ***
 
-**Dependencies**
+**Dependant Packages**
 
 	import numpy as np  
 	import matplotlib.pyplot as plt  
@@ -11,19 +11,42 @@ Here you can import the h5 file into a workable array, extract relevant experime
 	import pyUSID as usid  
 
 ***
-**User Input** 
-	file = r'some_.h5_file'  
-	
+**User Input**  
+	`file = r'some_.h5_file'`  
+	`calibration_file = r'some_csv/txt_file'`  
+***	
 **Data Import**  
 `import_h5(file,mode = 'r')` | imports h5 file; default read-only  
-`get_library(file)` | prints the h5 tree  
 
+`get_library(file)` | prints the h5 tree  
+***
 **Extract Acquisition Information**  
 `image_cube(file, transpose = True)` | gets 3D array of monochromatic images  
+
 `wavelengths(file)` | gets 1D array of wavelengths, indexes correlated with z-dimension in image cube  
+
 `data_cube(file,transpose=True)` | outputs (wavelengths,image_cube) as tuple  
+
 `get_exposure_time(file)` | gets the exposure time (default in seconds)  
+
 `get_datetime(file)` | image acquisition time as YYYY/MM/DD HH:MM:SS  
+
 `bounds(file)` | makes array of {min wavelength, max wavelength, stepsize}  
+
 `objective(file)` | finds objective magnification (int)  
+
 `processings(file)` | prints list/makes array of processing steps (i.e. Subtraction, Rectification, Registration, etc)  
+
+`pixel_size(file)` | makes array of pixel {size, unit}  
+***
+**Extract Data Information**  
+`get_cube_dimensions(data_cube)` | outputs array {width,height,num wavelengths}  
+***
+**Data Manipulation**  
+`wavelength_correction(data_cube,calibration_file,**kwargs)` | corrects for detector sensitivity  
+
+`crop_image_cube(image_cube, min_width=None, max_width=None, min_height=None, max_height=None)` | spatial crop of the image_cube  
+
+`crop_data_cube(data_cube, min_width=None, max_width=None, min_height=None, max_height=None, min_wavelength = None, max_wavelength = None)` | spatial and wavelength crop of data_cube  
+***
+**Replicate PhySpec Plots**  
