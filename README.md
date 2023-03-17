@@ -1,6 +1,6 @@
 # Hyperspectral-Mapping
 
-![](https://user-images.githubusercontent.com/48839468/225806474-69a4075d-50f9-4bb4-ad7a-3f39f046ec8c.png)
+![](https://user-images.githubusercontent.com/48839468/225807150-e8c61e85-125e-48fc-911f-9c11dcd4bbd5.png)
 
 Bits of code for extracting and mapping PL features from hyperspectral code in the Ginger lab
 
