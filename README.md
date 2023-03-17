@@ -1,4 +1,4 @@
-# Hyperspectral-Mapping
+# Hyperspectral Functions
 
 ![](https://user-images.githubusercontent.com/48839468/225807150-e8c61e85-125e-48fc-911f-9c11dcd4bbd5.png)
 
