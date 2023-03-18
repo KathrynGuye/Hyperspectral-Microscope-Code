@@ -82,3 +82,13 @@ _________________________
 	plot_pixel(data_cube,position,fig_num=None,xlabel='None',ylabel=None,**kwargs) #plots spectrum at pixel (x,y); kwargs relevant to matplotlib.pyplot  
 
 	average_spectrum(data_cube,fig_num = None,xlabel = None,ylabel = None,**kwargs) #plots spectrum of whole image; kwargs relevant to matplotlib.pyplot; input crop_data_cube for select region  
+	
+	image_slice(data_cube,single_wavelength,fig_num = None,xlabel = 'x (pixels)',ylabel = 'y (pixels)',**kwargs) #plots an intensity image at a given wavelength  
+	
+	x_line_profile(data_cube,wavelength,y_pos,trace_fig_num=None,map_fig_num=None,linecolor='dimgrey',**kwargs) #plots the intensity values of a horizontal trace at a particular wavelength  
+	
+	y_line_profile(data_cube,wavelength,x_pos,trace_fig_num=None,map_fig_num=None,linecolor='dimgrey',**kwargs) #plots the intensity values of a vertical trace at a particular wavelength  
+	
+	intensity_dist(data_cube,wavelength,facecolor='grey',**kwargs) #plots a histogram of intensity values (binsize 10% of maximum value) at a particular wavelength  
+	
+	axis2scalebar(pixel_size,um_length,fig_num,loc='lower right',pad = 0.1, borderpad = 0.5, sep=5, frameon=False,size_vertical=20,**kwargs) #removes axes with pixel values and adds a scale bar to images 
