@@ -1,4 +1,4 @@
-**HSFunctions : Basic functions for working with the h5 files output by the IMA Hyperspectral Microscope**   
+**HSFunctions.basics : Basic functions for working with the h5 files output by the IMA Hyperspectral Microscope**   
 
 Here you can import the h5 file into a workable array, extract relevant experimental information from the h5 file, and replicate simple images and plots. 
 
